@@ -1,0 +1,296 @@
+/*
+Filename: style.css
+Project Name: Monimonifinds Website Template 
+Copyright: 03/01/26 Monimoni (Raynard Dumadag)
+Version: 1.0
+REVISION        DATE            DESCRIPTION
+*/
+
+/* Variable Declaration*/
+:root{
+ --primary-background-color: #F4EFEB;
+ --secondary-background-color: #e7dbd2;
+ --primary-font-color: #fff;
+ --secondary-font-color: #020064;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    background: #F4EFEB;
+    color: var(--primary-background-color);
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(Images/mainPageBG2.jpg);
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+.container{
+    padding: 10px 5%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 40px;
+    color: var(--primary-font-color);
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    padding-top: 18px;
+}
+nav ul li a{
+    color: var(--primary-font-color);
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 18px;
+}
+nav ul li a:hover{
+    opacity: 50%;
+    transition: 0.5s;
+}
+.header-text{
+    position: relative;
+    margin-top: 40%;
+    font-size: 28px;
+}
+/*----------About-------------*/
+#about{
+    padding: 80px 0px;
+    color: var(--secondary-font-color);
+}
+.about-h1{
+    padding-top: 70px;
+    color: var(--secondary-font-color);
+    position: flex;
+    text-align: center;
+    font-size: 44px;
+}
+.about-p{
+    padding: 50px 20%;
+    color: var(--secondary-font-color);
+    font-size: 20px;
+    text-align: center; 
+    font-weight: 10;
+}
+/*Finds Section*/
+#finds{
+    height: auto;
+    width: auto;
+    color: var(--primary-font-color);
+}
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchBar input{
+    width: 50%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid var(--secondary-font-color);
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.searchBar input:focus{
+    border-color: var(--primary-background-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+.searchBar a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.searchBar a i{
+    color: var(--secondary-font-color);
+    transition: color 0.3s;
+}
+.searchBar a i:hover{
+    color: gray;
+}
+.destinations-list{
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    position: relative;
+}
+.destinations{
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+.destinations img{
+    border-style: none;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.destinations .layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding: 20px;
+    background: rgba(0,0,0,0.15);
+    transition: background 0.5s ease;
+}
+
+.destinations:hover .layer{
+    background: rgba(0,0,0,0.5);
+}
+
+.destinations:hover img{
+    transform: scale(1.1);
+}
+.layer h3{
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.layer h4{
+    font-size: 1.2rem;
+}
+.layer p{
+    font-size: 0.9rem;
+    opacity: 1;
+    text-align: right;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btn-container .btn{
+    display: inline-block;
+    margin: 50px 0;
+    width: max-content;
+    border: 1px solid var(--secondary-font-color);
+    padding: 10px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--secondary-font-color);
+    transition: background 0.5s, color 0.5s;
+    
+}
+.btn-container .btn:hover{
+    background: var(--secondary-font-color);
+    color: #fff;
+}
+
+/* Contact Us*/
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Important for mobile responsiveness */
+}
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left h1{
+    color: var(--secondary-font-color);
+}
+.contact-left p{
+    margin-top: 30px;
+    color: var(--secondary-font-color);
+    font-size: 24px;
+}
+.contact-left p i{
+    color: var(--secondary-font-color);
+    margin-right: 14px;
+    font-size: 24px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 14px;
+    color: var(--secondary-font-color);
+    display: inline-block;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.social-icons a:hover{
+    opacity: 50%;
+    transform: translateY(-5px);
+}
+.btn2{
+    text-decoration: none;
+    display: inline-block;
+    margin: 50px 0;
+    width: max-content;
+    border: 1px solid var(--secondary-font-color);
+    padding: 10px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--secondary-font-color);
+    transition: background 0.5s, color 0.5s;
+}
+.btn2:hover{
+    background: var(--secondary-font-color);
+    color: #fff;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--secondary-font-color);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--primary-font-color);
+    font-size: 14px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/*Copyright*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    background: var(--secondary-font-color);
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: var(--primary-font-color);
+}
