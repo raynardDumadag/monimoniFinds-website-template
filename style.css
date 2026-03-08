@@ -4,6 +4,7 @@ Project Name: Monimonifinds Website Template
 Copyright: 03/01/26 Monimoni (Raynard Dumadag)
 Version: 1.0
 REVISION        DATE            DESCRIPTION
+Tab Connection  3/8/26      Connected CSS for other tabs, differentiated by tab-(element) and added different photos for the tab-header. Also introduced tab-h2 and tab-p for differentiation.
 */
 
 /* Variable Declaration*/
@@ -32,10 +33,83 @@ body{
     min-height: 100vh;
     width: 100%;
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(Images/mainPageBG2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(Images/mainPageBG.jpg);
     background-position: center;
     position: relative;
     background-size: cover;
+}
+/* For tabs outside Main*/
+.header-tab-1{
+    /* Set a specific height for the header area */
+    min-height: 300px; 
+    width: 100%;
+    
+    /* Ensure the image covers the area without stretching */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/headerBG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* Background-color as a fallback */
+    background-color: var(--primary-background-color);
+    position: relative;
+    margin-bottom: 40px;
+}
+.header-tab-2{
+    /* Set a specific height for the header area */
+    min-height: 300px; 
+    width: 100%;
+    
+    /* Ensure the image covers the area without stretching */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/headerBG2.jpg.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* Background-color as a fallback */
+    background-color: var(--primary-background-color);
+    position: relative;
+    margin-bottom: 40px;
+}
+.header-tab-3{
+    /* Set a specific height for the header area */
+    min-height: 300px; 
+    width: 100%;
+    
+    /* Ensure the image covers the area without stretching */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/headerBG3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* Background-color as a fallback */
+    background-color: var(--primary-background-color);
+    position: relative;
+    margin-bottom: 40px;
+}
+/*H2 Header for Tabs outside Main Tab*/
+.tab-h2 {
+    position: absolute;
+    bottom: 100px; /* Increased this to make room for the paragraph below it */
+    left: 5%;
+    font-size: 40px;
+    font-weight: 300; 
+    color: white;
+    width: 90%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tab-p {
+    position: absolute;
+    bottom: 60px; /* Keeps this near the very bottom */
+    left: 5%;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    width: 90%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container{
     padding: 10px 5%;
