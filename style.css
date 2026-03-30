@@ -171,6 +171,12 @@ nav ul li a:hover{
     width: auto;
     color: var(--primary-font-color);
 }
+#finds-html{
+    height: auto;
+    width: auto;
+    color: var(--primary-font-color);
+    margin-bottom: 5%;
+}
 .searchBar{
     display: flex;
     justify-content: center;

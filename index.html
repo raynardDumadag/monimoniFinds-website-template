@@ -47,7 +47,7 @@ Fixed Bug                   3/12/26     Fixed the text in contact us right
     </div>
     <div id="finds">
         <div class="searchBar">
-        <input type="text" placeholder="Search your preferred destination"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <input type="text" placeholder="Search your preferred destination" onkeyup="myFunction()" id="destinationInput"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <div class="destinations-list">
             <div class="destinations">
@@ -84,7 +84,7 @@ Fixed Bug                   3/12/26     Fixed the text in contact us right
             </div>       
         </div>
          <div class="btn-container">
-                <a href="" class="btn">See more</a>     
+                <a href="finds.html" class="btn">See more</a>     
         </div>
     </div>
      <div id="contact-us">
@@ -116,3 +116,27 @@ Fixed Bug                   3/12/26     Fixed the text in contact us right
     </div>
 </body>
 </html>
+<script>
+function myFunction() {
+  var input, filter, container, items, h3, i, txtValue;
+  input = document.getElementById('destinationsInput');
+  filter = input.value.toUpperCase();
+  
+  // Target the specific items by their class name
+  items = document.getElementsByClassName('destinations');
+
+  for (i = 0; i < items.length; i++) {
+    // Look for the h3 inside each filtered item
+    h3 = items[i].getElementsByTagName("h3")[0];
+    
+    if (h3) {
+      txtValue = h3.textContent || h3.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        items[i].style.display = "";
+      } else {
+        items[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
